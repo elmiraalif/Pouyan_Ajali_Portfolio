@@ -1,0 +1,77 @@
+$primary-color: #262730;
+$secondary-color: #d39a43;
+$light-gray: #a7a7a7;
+
+@mixin wrapper {
+  margin-left: 20.2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+@mixin btn-cv {
+  color: #d39a43;
+  background: none;
+  border: 1px solid $secondary-color;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  &:hover {
+    @include easeOut;
+    background: $secondary-color;
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+@mixin btn-full {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+  background: $light-gray;
+  color: #fff;
+  text-transform: uppercase;
+  border: none;
+  &:hover {
+    @include easeOut;
+    background: $secondary-color;
+    color: $primary-color;
+    cursor: pointer;
+  }
+}
+
+@mixin social-icon {
+  margin: 0 0.2rem;
+  img {
+    max-width: 35px;
+    width: 100%;
+    filter: invert(67%) sepia(4%) saturate(20%) hue-rotate(347deg) brightness(100%) contrast(87%);
+  }
+  &:hover {
+  }
+}
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+// Media Query Mixins
+@mixin mediaSm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+@mixin mediaMd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

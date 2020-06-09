@@ -1,0 +1,53 @@
+<%- include ('partials/header') %>
+
+<main id="contact">
+  <a href="#" class="menu-icon" onclick="openMenu()">
+    <svg viewBox="0 0 100 80" width="40" height="40">
+      <rect width="70" height="2" stroke="#fff" stroke-width="2"></rect>
+      <rect y="25" width="70" height="2" stroke="#fff" stroke-width="2"></rect>
+      <rect y="50" width="70" height="2" stroke="#fff" stroke-width="2"></rect>
+    </svg>
+  </a>
+  <div class="box">
+    <h3>
+      Questions <span><img src="images/question.png" alt="" /></span>
+    </h3>
+    <form action="" method="POST">
+      <p class="message"><%= message %></p>
+      <div>
+        <input type="text" placeholder="Your Name" name="name" />
+      </div>
+      <div><input type="email" placeholder="Your Email" name="email" required /></div>
+      <div>
+        <input type="text" placeholder="Subject" name="subject" />
+      </div>
+      <div>
+        <textarea rows="10" placeholder="Your Message" name="message" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div class="box">
+    <h3>Get In Touch</h3>
+    <p>
+      <span><img src="images/location.png" alt="Location" /></span> 11 Kenneth Wood Crescent, North York, Ontario
+    </p>
+    <p>
+      <span><img src="images/telephone.png" alt="Phone number" /></span> +1-437-997-3584
+    </p>
+    <p>
+      <span><img src="images/email.png" alt="Email" /></span>me@pouyanajali.com
+    </p>
+    <div class="icons">
+      <a class="icon" href=""><img src="images/behance.svg" alt="behance" /></a>
+      <a class="icon" href=""><img src="images/dribbble.svg" alt="dribble" /></a>
+      <a class="icon" href=""><img src="images/instagram.svg" alt="instagram" /></a>
+      <a class="icon" href=""><img src="images/linkedin.svg" alt="linkedin" /></a>
+    </div>
+    <div id="map"></div>
+  </div>
+</main>
+<script src="js/map.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbEZhQBz1kkTd5yoJ0gXP-1U-0Ei2-5t8&callback=initMap"></script>
+
+<%- include ('partials/footer') %>

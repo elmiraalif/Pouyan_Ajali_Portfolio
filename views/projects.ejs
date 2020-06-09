@@ -1,0 +1,25 @@
+<%- include("partials/header") %>
+
+<main>
+  <div class="mobile-header">
+    <a href="#" class="menu-icon" onclick="openMenu()">
+      <svg viewBox="0 0 100 80" width="40" height="40">
+        <rect width="70" height="2" stroke="#fff" stroke-width="2"></rect>
+        <rect y="25" width="70" height="2" stroke="#fff" stroke-width="2"></rect>
+        <rect y="50" width="70" height="2" stroke="#fff" stroke-width="2"></rect>
+      </svg>
+    </a>
+  </div>
+  <section id="projects">
+    <!-- <h1 class="hidden">Projects</h1> -->
+    <% pictures.forEach(picture => { %>
+    <div class="box">
+      <a href="project">
+        <img src="images/<%= picture %>.png" alt="" />
+      </a>
+    </div>
+    <% }); %>
+  </section>
+</main>
+
+<%- include("partials/footer") %>

@@ -1,0 +1,139 @@
+// WideScreens
+@include mediaXl {
+  .logo {
+    justify-content: center;
+    & > a:nth-child(2) {
+      visibility: hidden;
+    }
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+
+// Desktops & Laptops
+@include mediaLg {
+  header {
+    display: none;
+  }
+  main#home {
+    width: 100%;
+    flex-flow: column;
+    align-items: center;
+    margin: 0;
+    .portrait {
+      height: 70vh;
+      margin: 2rem 0;
+    }
+    .content {
+      width: 100%;
+      height: 50vh;
+      justify-content: start;
+      // height: fit-content;
+      .text {
+        margin-bottom: 6rem;
+      }
+    }
+  }
+  main#projects {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0;
+    width: 100%;
+  }
+  main#contact {
+    width: 100%;
+    height: 93vh;
+    margin: 0;
+  }
+  footer {
+    position: static !important;
+    padding: 1rem;
+    text-align: center;
+  }
+  .menu-icon {
+    display: none;
+  }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+  header {
+    display: none;
+  }
+  main#home {
+    width: 100%;
+    flex-flow: column;
+    margin: 0;
+    .portrait {
+      height: 50vh;
+      margin: 2rem 0;
+      width: 50%;
+    }
+    .content {
+      width: 100%;
+      justify-content: start;
+      height: fit-content;
+      .text {
+        margin-bottom: 6rem;
+        h1 {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .menu-icon {
+      position: absolute;
+      top: 3rem;
+      left: 3rem;
+    }
+  }
+  main#contact {
+    width: 100%;
+    margin: 0;
+    flex-flow: column-reverse;
+    height: auto;
+    padding: 5rem 0;
+    .box {
+      width: 70%;
+      margin: 2rem 0;
+    }
+  }
+  footer {
+    position: static !important;
+    padding: 1rem;
+    text-align: center;
+  }
+  .menu-icon {
+    position: absolute;
+    top: 3rem;
+    left: 5rem;
+    cursor: pointer;
+  }
+}
+
+// Smartphones
+@include mediaSm {
+  main#home {
+    padding: 0 3rem;
+    .portrait {
+      width: 60%;
+    }
+    .content {
+      h1 {
+        text-align: center;
+      }
+      .text {
+        margin: 0;
+      }
+    }
+    .buttons {
+      flex-flow: column;
+      align-items: center;
+      button {
+        align-self: stretch;
+      }
+      .icons {
+        margin: 2rem;
+      }
+    }
+  }
+}
